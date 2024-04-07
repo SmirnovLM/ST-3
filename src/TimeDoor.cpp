@@ -1,6 +1,7 @@
 // Copyright 2024 Smirnov Leonid
 
 #include <stdexcept>
+
 #include <thread> // NOLINT [build/c++11]
 #include <chrono> // NOLINT [build/c++11]
 
