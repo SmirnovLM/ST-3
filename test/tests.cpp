@@ -4,18 +4,18 @@
 #include <gmock/gmock.h>
 #include <cstdint>
 
-#include <chrono> 
-#include <thread>
+#include <chrono> // NOLINT [build/c++11]
+#include <thread> // NOLINT [build/c++11]
 
 #include "TimedDoor.h"
 
 class MockTimerClient : public TimerClient {
-public:
+ public:
     MOCK_METHOD(void, Timeout, (), (override));
 };
 
 class TimedDoorTest : public ::testing::Test {
-protected:
+ protected:
     TimedDoor door;
     MockTimerClient mockClient;
     Timer timer;
